@@ -307,5 +307,77 @@ echo call finshed...
 
 ![image-20251102155422137](assets/image-20251102155422137.png)
 
+## win script skill demos
+
+#### 1.编写自己的磁盘检查程序cdsk.bat
+
+```win batch
+: 简化版的chkdsk,可以接受0-3个参数
+: 在命令行中输入cdsk ===>chkdsk 没有参数,可以正常运行
+: 在命令行中输入cdsk c:===>chkdsk c: 有一个参数,可以正常运行
+: 在命令行中输入cdsk c: /f ===>chkdsk c: /f 有2个参数,可以正常运行
+: 在命令行中输入cdsk c: /f /v ===>chkdsk c: /f /v 有3个参数,可以正常运行
+
+chkdsk %1 %2 %3
+```
+
+#### 2.防止空字符串错误的脚本avoierr.bat
+
+```win batch
+@echo off
+if x%1==x goto empty
+
+echo %%1 is not empty
+goto stop
+
+:empty
+echo %%1 is empty
+goto stop
+
+:stop
+echo the bat is now ended...
+@echo on
+```
+
+###### 效果
+
+![image-20251102164040369](assets/image-20251102164040369.png)
 
 
+
+#### 3.正确使用goto指令,文件命usegoto.bat,这里有一个小技巧,echo.表示输出一个空行,也就是可以实现换行
+
+```win batch
+@echo off
+:loop
+if x%1==x goto stop
+
+echo Displying %1
+type %1
+echo.
+
+shift
+goto loop
+
+:stop
+echo No more file to display,script is now quit
+@echo on
+```
+
+###### 效果
+
+![image-20251102165704911](assets/image-20251102165704911.png)
+
+## win tree command
+
+### 1>mkdir创建一个空文件夹
+
+![image-20251102170315678](assets/image-20251102170315678.png)
+
+### 2>cd改变当前目录
+
+![image-20251102170420956](assets/image-20251102170420956.png)
+
+### 3>rmdir删除一个空目录,如果非空,删除报错
+
+![image-20251102170915601](assets/image-20251102170915601.png)

@@ -1,0 +1,3 @@
+echo i will call task.bat 
+call task
+echo call finshed...

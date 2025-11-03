@@ -381,3 +381,87 @@ echo No more file to display,script is now quit
 ### 3>rmdir删除一个空目录,如果非空,删除报错
 
 ![image-20251102170915601](assets/image-20251102170915601.png)
+
+### 4>move移动文件或者文件夹
+
+![image-20251102172553628](assets/image-20251102172553628.png)
+
+文件也是可以移动的
+
+![image-20251102172806019](assets/image-20251102172806019.png)
+
+### 5>path命令,显示系统的环境变量
+
+![image-20251102173153728](assets/image-20251102173153728.png)
+
+### 6>tree命令显示磁盘上或者指定的文件夹里面的所有路径,不显示文件
+
+![image-20251102173531384](assets/image-20251102173531384.png)
+
+###### 注意:如果需要显示文件,需要添加 /f选项
+
+![image-20251102174039285](assets/image-20251102174039285.png)
+
+### 7>subst把一个路径映射为一个磁盘驱动器
+
+![image-20251102175256931](assets/image-20251102175256931.png)
+
+### 8>sort对文件内容进行排序
+
+我们有一个content.txt,内容如下
+
+```
+pineapple
+apple
+peach
+banana
+lemon
+orange
+strawberry
+```
+
+然后我们用sort命令对它进行排序,会输出排序后的内容
+
+![image-20251102200004696](assets/image-20251102200004696.png)
+
+还可以把排序后的内容输出到一个文件
+
+![image-20251102200145663](assets/image-20251102200145663.png)
+
+然后打开这个文件
+
+![image-20251102200230457](assets/image-20251102200230457.png)
+
+### 9>find在文件中查找字符串
+
+比如,在上面的content.txt文件中查找字符串"pine"
+
+![image-20251102200759526](assets/image-20251102200759526.png)
+
+注意,find命令通常和type命令一起使用
+
+![image-20251102200949066](assets/image-20251102200949066.png)
+
+![image-20251102202007037](assets/image-20251102202007037.png)
+
+### 10>findstr也是在文件中查找字符串,不过他是区分大小写的.
+
+比如,我们有一个msg.txt文件,内容如下
+
+```
+Hello girl
+Hello lady
+hey guy
+welcome
+hello ,man
+good bye
+
+```
+
+然后我们用fingstr来查找hello
+
+![image-20251102211656803](assets/image-20251102211656803.png)
+
+然后我们来查找Hello
+
+![image-20251102211727665](assets/image-20251102211727665.png)

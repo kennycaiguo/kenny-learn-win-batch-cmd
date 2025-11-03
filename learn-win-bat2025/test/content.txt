@@ -1,0 +1,7 @@
+pineapple
+apple
+peach
+banana
+lemon
+orange
+strawberry

@@ -93,6 +93,76 @@ del *.bas /p 删除所有以bas结尾的文件,并且需要你确认.
 
 #### 13. recover可以恢复损坏的文件
 
+#### 14 set命令,可以查看或者设置环境变量
+
+1)查看,虽然set即可
+
+![image-20251104105730950](assets/image-20251104105730950.png)
+
+2)设置,set 变量名=值,查看变量可以使用echo  %变量名% 的格式,也可以用set 变量名称 来查看
+
+![image-20251104110154104](assets/image-20251104110154104.png)
+
+#### 15.设备文件NUL: 可以清除执行命令的显示信息
+
+用法: copy c:\myfiles\*.*  d:\myfiles >NUL:
+
+#### 16.doskey
+
+用法参考1: https://www.cnblogs.com/feiquan/p/10652442.html
+
+用法参考2: https://blog.csdn.net/hebtiger/article/details/3868178
+
+用法参考3: https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/doskey
+
+用法实例1,给dir命令增加清屏功能,两个命令之间用$t分隔
+
+```cmd
+doskey dir=cls$tdir
+```
+
+doskey dir= 可撤消对dir 的宏定义
+
+小技巧
+
+```cmd
+doskey/restall 重新装入一次,以前的命令行撤消. 
+
+
+
+doskey/history 显示内存中所有的命令,可以">"显示到其它文件中,缩写"/H". 
+
+
+
+doskey dir=cls 则击入dir等同于cls一样. 
+
+
+
+doskey/macros 可显示所有的宏定义,可使用">"重定义到文件中,可缩写"/M". 
+
+
+
+doskey dir= 可撤消对dir 的宏定义. 
+
+
+
+doskey p=dir$tdir*.exe/p$tdir c:\t$tdir c:\t$* 
+
+
+
+$t为命令的区分符,而$*为命令的结束符 
+
+
+
+doskey/insert(overstrike)?在重新输入命令时,对旧命令的修改是插入还是覆 
+
+
+
+盖状态(默认). 
+```
+
+
+
 ## win batch command
 
 #### 1>echo可以显示文本到控制台上面,也可以输出到文件
